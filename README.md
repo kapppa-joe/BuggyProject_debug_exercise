@@ -2,7 +2,7 @@
 
 An exercise for debugging cloned from Made Tech's learning guide https://learn.madetech.com/guides/03-Debugging/ . 
 
-Original GitHub repo https://github.com/madetech/learn/tree/master/guides/03-Debugging/BuggyProject was a part in a whole repo. It was not very handy to clone only that folder in a local machine, so I take out this folder and store it in this repo.
+Original GitHub source https://github.com/madetech/learn/tree/master/guides/03-Debugging/BuggyProject was a folder within a whole repo. It was not very handy to clone only that folder in a local machine, so I take out the folder with its contents and store them in this repo.
 
 ## Known issue
 There seems to be an issue of installing Ruby gem `ffi` on some versions of macOS / Ruby.
@@ -13,15 +13,19 @@ Installing ffi 1.9.25 with native extensions
 Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
 ```
 
-I was able to solve this issue on my machine, with below config:
-macOS version: 12.1 (Monterey)
-Chip: Apple M1 Pro
-Ruby version: 2.6.9 (installed by rbenv)
+I was able to solve this issue on my machine with below config:
+
+ * macOS version: 12.1 (Monterey)
+ * Chip: Apple M1 Pro
+ * Ruby version: 2.6.9 (installed by rbenv)
+ * Bundler version: 2.3.6
 
 
-Here is what I did to solve this error.
+*Below is what I did to solve this error.*
 
-Step 1. Copy the whole BuggyProject folder from a local clone of https://github.com/madetech/learn/tree/master/guides/03-Debugging/BuggyProject. Run `git init` and stored a copy on github. (which is the 1st commit of this repo)
+
+Step 1. Copy the whole BuggyProject folder from a local clone of https://github.com/madetech/learn/tree/master/guides/03-Debugging/BuggyProject. 
+Run `git init` and stored a copy on github. (which is the 1st commit of this repo)
 
 Step 2. Change `.ruby-version` from `2.5.0` to `2.6.9`.
 (As I failed to install 2.5.0 on my machine)
